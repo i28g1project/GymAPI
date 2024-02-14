@@ -1,42 +1,25 @@
 package com.example.gymapi.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
+@Entity
+@Getter
+@Setter
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String login;
     private String password;
     private Date birthDate;
     private boolean plec;
-
-    public User(int id, String login, String password, Date birthDate, boolean plec)
-    {
-        this.id = id;
-        this.login = login;
-        this.password = password;
-        this.birthDate = birthDate;
-        this.plec = plec;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public boolean isPlec() {
-        return plec;
-    }
 
     @Override
     public String toString() {
