@@ -15,20 +15,9 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String login;
-    private String password;
-    private Date birthDate;
-    private boolean plec;
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", birthDate=" + birthDate +
-                ", plec=" + plec +
-                '}';
-    }
+    private int Id;
+    private String Login;
+    private String Password;
+    private int BirthYear;
+    private int Male;
 }
